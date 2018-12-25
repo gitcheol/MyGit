@@ -1,4 +1,4 @@
-![Alt text](./Friends.jpg= 100x20)
+![Logo](./Friends.jpg) {: width="100" height="20"}
 
 This is an H1
 Algorithms
