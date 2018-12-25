@@ -1,4 +1,4 @@
-![Alt text](/Users/gichulkim/Desktop/handong/git/Friends.jpg)
+![Alt text](/Users/gichulkim/Desktop/handong/git/to/Friends.jpg)
 
 This is an H1
 Algorithms
