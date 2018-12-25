@@ -1,7 +1,10 @@
-This is an H1
 ![Alt text](/Users/gichulkim/Desktop/handong/git/to/Friends.png)
+
+This is an H1
 Algorithms
 =============
+
+
 This is an H2
 
 ===========
