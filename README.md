@@ -1,4 +1,4 @@
-![Alt text](./Friends.jpg)<img width="15" height="15"></img>
+![Alt text](./Friends.jpg=100x20)
 
 This is an H1
 Algorithms
