@@ -1,5 +1,4 @@
 ![Logo](./Friends.jpg) 
-<img width="" height=""></img>
 
 This is an H1
 Algorithms
