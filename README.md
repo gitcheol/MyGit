@@ -1,4 +1,5 @@
-![Logo](./Friends.jpg) {: width="100" height="20"}
+![Logo](./Friends.jpg) 
+<img width="" height=""></img>
 
 This is an H1
 Algorithms
