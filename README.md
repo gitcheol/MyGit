@@ -1,5 +1,3 @@
-![Logo](./Friends.jpg) 
-
 This is an H1
 Algorithms
 =============
