@@ -1,6 +1,6 @@
-#종류
+# 종류
 
-##BaekJoon
+## BaekJoon
 
 >ACM-ICPC
 
