@@ -1,15 +1,7 @@
-내 밥 들
-=============
-<hr/>
+#종류
 
-BaekJoon
----------------
+##BaekJoon
 
-ACM-ICPC
-
-
-##ACM
-
-###AAA
+>ACM-ICPC
 
 
