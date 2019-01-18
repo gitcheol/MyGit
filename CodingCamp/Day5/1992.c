@@ -21,32 +21,31 @@ int check(int **Image,int x,int y,int size){
 
 void solver(int **Image,int x,int y,int size){
 
-  if (check(Image,x,y,size)==1 || check(Image,x,y,size)==0) {
-    printf("%d",check(Image,x,y,size));
-    return ;
-  }
-  printf("(");
+
   if (size==2){
     if (check(Image,x,y,size)==1 || check(Image,x,y,size)==0) {
       printf("%d",check(Image,x,y,size));
-      return;
     }
     else {
       printf("(%d%d%d%d)",Image[x][y],Image[x][y+1],Image[x+1][y],Image[x+1][y+1]);
-      return;
     }
-  }else{
-    //하나를 만들어 줘야된다.
-    return solver(Image,x,y,size/2);
+    return;
   }
-  
-  printf(")");
+
+  if (check(Image,x,y,size)==1 || check(Image,x,y,size)==0) {
+    printf("%d",check(Image,x,y,size));
+    return;
+  }
+
+    printf("(");
+    //하나를 만들어 줘야된다.
+    solver(Image,x,y,size/2);
+    solver(Image,x,y+size/2,size/2);
+    solver(Image,x+size/2,y,size/2);
+    solver(Image,x+size/2,y+size/2,size/2);
+    printf(")");
 }
 
-//  return solver(Image,x,y,size/2);
-  // return solver(Image,x,size/2+1,size/2);
-  // return solver(Image,size/2+1,y,size/2);
-  // return solver(Image,size/2+1,size/2+1,size/2);
 
 
 
@@ -68,16 +67,14 @@ int main(){
       scanf("%1d",&Image[i][j]);
     }
   }
-
   solver(Image,0,0,N);
+  //solver(Image,0,N/2+1,N/2);
+  // solver(Image,size/2+1,y,size/2);
+  // solver(Image,size/2+1,size/2+1,size/2);
 
-  //for(i=N; i>2; i/=2){
-    // if(check(Image,0,0,N)!=-1){
-    //   printf("모두같데!");
-    // }
-    // else f
 
-  //}
+
+
 
 
 
