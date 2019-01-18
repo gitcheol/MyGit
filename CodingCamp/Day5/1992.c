@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-
 
 int check(int **Image,int x,int y,int size){
   int i,j;
@@ -47,19 +45,15 @@ void solver(int **Image,int x,int y,int size){
 }
 
 
-
-
-
-
 int main(){
   int N;
   int i,j;
   int **Image;
 
   scanf("%d",&N);
-  Image= (int**)malloc(sizeof(int)*N+64*N);  //Memory할당부분 다시 알아보자.
+  Image= malloc(sizeof(int *)*N);  //해결. sizeof(int *)랑 sizeof(int )다르다.
   for(i=0; i<N; i++){
-    Image[i] = (int*)malloc(sizeof(int)*N+64*N);
+    Image[i] = malloc(sizeof(int)*N);
   }
 
   for(i=0; i<N; i++){
@@ -68,20 +62,6 @@ int main(){
     }
   }
   solver(Image,0,0,N);
-  //solver(Image,0,N/2+1,N/2);
-  // solver(Image,size/2+1,y,size/2);
-  // solver(Image,size/2+1,size/2+1,size/2);
-
-
-
-
-
-
-
-
-
-
-
 
   //deallocation Memory
   for(i=0; i<N; i++){

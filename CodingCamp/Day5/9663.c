@@ -1,20 +1,53 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int case_num(int N){
-  int num=0;
-  int i;
-  for(i=0; i<N; i++){
-    num=num+N*(N-i);
+
+void init(int **P,int N){
+  int i,j;
+  for(i=0;i<N;i++){
+    for(j=0;j<N;j++){
+      P[i][j]=0;
+    }
   }
-
-  return num;
+  return;
 }
 
-
 int main(){
+  int N,answer;
+  int i,j;
+  scanf("%d",&N);
+  int **P=malloc(sizeof(int *)*N);
+  for(i=0; i<N; i++){
+    P[i]=malloc(sizeof(int)*N);
+  }
+  init(P,N);
 
-  printf("%d",case_num(8));
 
 
+
+
+
+
+
+
+
+
+
+
+  //show
+  // for(i=0;i<N;i++){
+  //   for(j=0;j<N;j++){
+  //     printf("%d ",P[i][j]);
+  //   }
+  //   printf("\n");
+  // }
+
+
+  //memory deallocation
+  for(i=0;i<N;i++){
+    free(P[i]);
+  }
+  free(P);
+  printf("%d",answer);
   return 0;
 }
