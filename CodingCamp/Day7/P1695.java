@@ -8,11 +8,10 @@ public class P1695 {
     int i,j;
     int[] A=new int[N];
     int[] B=new int[N];
-    
+
     //입력받는다
     for(i=0; i<N; i++){
       A[i]=sc.nextInt();
-      B[N-1-i]=A[i];
     }
 
     for(i=0; i<N; i++){

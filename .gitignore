@@ -3,3 +3,4 @@ Algorithms/ACM-ICPC/*.exe
 .gitattributes
 .bashrc.swp
 
+/.metadata/
