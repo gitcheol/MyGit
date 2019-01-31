@@ -3,7 +3,6 @@ package Day12;
 public class Kakaocode1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[][] picture=new int[][] {
 			{1,1,1,0},{1,2,2,0},{1,0,0,1},{0,0,0,1},{0,0,0,3},{0,0,0,3}
 		};
@@ -11,9 +10,9 @@ public class Kakaocode1 {
 		Solution M=new Solution();
 		answ=M.solution(6,4,picture);
 //		show
-		for(int i=0; i<6; i++) {
-			System.out.println(picture[i][0]+" "+picture[i][1]+" "+picture[i][2]+" "+picture[i][3]);
-		}
+//		for(int i=0; i<6; i++) {
+//			System.out.println(picture[i][0]+" "+picture[i][1]+" "+picture[i][2]+" "+picture[i][3]);
+//		}
 		System.out.println(answ[0]+"  "+answ[1]);
 	}
 
@@ -41,9 +40,8 @@ class Solution {
       answer[1] = maxSizeOfOneArea;
       return answer;
   }
-  		//picture[i][j]와 picture정보, 초기값의 picture값, 
+  
   public int sizeOfArea(int i,int j,int[][] picture,int val,int m,int n){
-    	//System.out.println(val+ " "+i+" "+j+" "+picture[1][0]);
     	
     	if((j+1<n)&&picture[i][j+1]==val) {
     		//System.out.println("1");
@@ -82,14 +80,3 @@ class Solution {
     }
         
 }
-
-
-
-
-
-//if(m-1>=0)
-//	recur(m-1,n,picture,picture[m][n],maxM,maxN);
-//if(n+1<maxN)
-//	recur(m,n+1,picture,picture[m][n],maxM,maxN);
-//if(n-1>=0)
-//	recur(m,n-1,picture,picture[m][n],maxM,maxN);
