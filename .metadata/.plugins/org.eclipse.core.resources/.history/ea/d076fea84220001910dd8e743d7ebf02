@@ -1,0 +1,40 @@
+package Day10;
+import java.util.Scanner;
+
+public class P8973 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int i,j;
+		int N,K;
+		int[] P =new int[1001];
+		int[][] M=new int[1001][3];
+		int[] G=new int[1001];
+		int[] S=new int[1001];
+		int[] B=new int[1001];
+
+		
+		N=sc.nextInt();
+		K=sc.nextInt();
+		
+		for(i=1; i<=N; i++) {
+			P[i]=i;
+			for(j=0; j<3; j++) {
+				M[i][j]=sc.nextInt();
+				if(j==0) {
+					G[i]+=M[i][0];
+				}
+				if(j==1) {
+					S[i]+=M[i][1];
+				}
+				if(j==2) {
+					B[i]+=M[i][20];
+				}
+			}
+		}
+		
+		
+		
+
+
+	}
+}

@@ -1,0 +1,34 @@
+package Day13;
+
+public class Kakaocode5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Soulution AN=new Soulution();
+		System.out.println(AN.solution(8));
+
+	}
+
+}
+
+class Soulution {
+	  public int solution(int n) {
+	      int answer = 0;
+	      long count=0;
+	      long[] facto=new long[60001];
+	      facto[0]=1;
+	      facto[1]=1;
+	      for(int i=2;i<=60000;i++){
+	          facto[i]=facto[i-1]*i;
+	      }
+	      System.out.println(facto[15]);
+	      int j=0;
+	      for(int i=n; i>=0; i=i-2,j++) {
+	    		count+=(facto[i+j]/facto[i]/facto[j]);
+
+	      }
+	      answer=(int)count%1000000007;
+	      
+	      return answer;
+	  }
+	}

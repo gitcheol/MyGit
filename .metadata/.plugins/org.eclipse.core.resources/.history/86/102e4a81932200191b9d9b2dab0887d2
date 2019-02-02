@@ -1,0 +1,33 @@
+package Day11;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class P9461 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int T;
+		int N;
+		ArrayList<Integer> ans=new ArrayList<Integer>();
+		T=sc.nextInt();
+		long[] wave=new long[101]; 
+		wave[1]=1;
+		wave[2]=1;
+		wave[3]=1;
+		wave[4]=2;
+		wave[5]=2;
+		for(int i=6; i<=100; i++) {
+			wave[i]=wave[i-1]+wave[i-5];
+		}
+		
+		
+		
+		
+		for(int i=0; i<T; i++) {
+			
+			
+				
+		}
+	}
+
+}

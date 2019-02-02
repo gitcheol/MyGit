@@ -1,0 +1,25 @@
+package Day13;
+
+public class Kakaocode5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Soulution AN=new Soulution();
+		System.out.println(AN.solution(7));
+
+	}
+
+}
+
+class Soulution {
+	  public int solution(int n) {
+	      int answer = 0;
+	      long[] facto=new long[60001];
+	      facto[1]=1;
+	      for(int i=2;i<=60000;i++){
+	          facto[i]=facto[i-1]*i;
+	      }
+	      answer=(int)facto[5];
+	      return answer;
+	  }
+	}

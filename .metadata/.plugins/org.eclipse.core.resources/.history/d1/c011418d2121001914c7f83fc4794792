@@ -1,0 +1,33 @@
+package OwnSol;
+import java.util.Scanner;
+
+public class P4276 {
+
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int i,j;
+	int n,m;
+	String temp;
+	
+	
+	n=sc.nextInt();
+	m=sc.nextInt();
+	//여기를 음수가 나올 떄 까지 무한 반복하면 되겠다.
+	if(n<0)return ;
+	for(i=m-n; i==m; i++) {
+		temp=Integer.toString(i);
+		
+	}
+	
+
+	System.out.println(n+" "+m);
+			
+	//if(n<0)return;
+	
+
+		
+
+
+	}
+
+}

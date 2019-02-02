@@ -1,0 +1,57 @@
+package Day11;
+import java.util.*;
+
+public class P10451 {
+	static int[] P;
+	static int N;
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		ArrayList<Integer> ans=new ArrayList<>();
+		int T;
+		int num=0;
+		T=sc.nextInt();
+		for(int l=0; l<T; l++) {
+			num=0;
+			N=sc.nextInt();
+			P=new int[N+1];
+			for(int i=1; i<=N; i++) {
+				P[i]=sc.nextInt();
+			}
+			//recu
+			
+			for(int i=1; i<=N; i++) {
+				//P[i]가 1이면num++ 
+				if(P[i]==1)num++;
+			}
+			ans.add(num);
+		}
+		//츨
+		for(int i=0; i<T; i++) {
+			System.out.println(ans.get(i));
+		}
+	}
+	static void recu() {
+		for(int i=1;i<=N; i++ ) {
+			go(i);
+		}
+	}
+	
+//	static void swap(int x,int y) {
+//		int temp;
+//		temp=x;
+//		x=y;
+//		y=temp;
+//		return;
+//	}
+//	
+	static int go(int x) {
+		if(P[x]==0)return 0;
+		int temp=P[x];
+		P[x]=0;
+		
+		return P[temp];
+	}
+	
+
+}
