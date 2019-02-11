@@ -1,10 +1,11 @@
-def makelotto():
-	lotto=[];
-	for i in range(0,6):
-		i=randint(1,45)
-		if i in lotto:
-			continue
-		lotto.append(i)
+from random import *
 
+def makelotto():
+	lotto=set()
+	while(len(lotto)<6):
+		lotto.add(randint(1,45))
+	return(list(lotto))
 
 	return lotto
+
+print(makelotto())
