@@ -39,11 +39,11 @@ Created on Tue Feb 12 16:12:32 2019
 #csv_in_file.close()
 #csv_out_file.close()
 
-import pandas as pd
-
-input_file = "p_20180930.csv"
-output_file= "p_20180930_3.txt"
-
-data_frame=pd.read_csv(input_file)
-print(data_frame)
-data_frame.to_csv(output_file,index=False)
+#import pandas as pd
+#
+#input_file = "p_20180930.csv"
+#output_file= "p_20180930_3.txt"
+#
+#data_frame=pd.read_csv(input_file)
+#print(data_frame)
+#data_frame.to_csv(output_file,index=False)
