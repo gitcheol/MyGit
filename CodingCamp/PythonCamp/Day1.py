@@ -492,6 +492,6 @@ http://bit.ly/2019pcamp
 #        filewriter.write(str(my_numbers[index_value])+'\n')
 #filewriter.close()
 #print("Output appended to file")
-
-import pandas as pd
-scores = pd.read_csv()
+#
+#import pandas as pd
+#scores = pd.read_csv()
