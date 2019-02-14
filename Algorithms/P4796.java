@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.util.Iterator;
-import java.util.ArrayList;
 
 
 public class P4796{
@@ -13,20 +11,15 @@ public class P4796{
 			L=sc.nextInt();
 			P=sc.nextInt();
 			V=sc.nextInt();
-			int sum=0;
-			int[] M=new int[V+1];
 			if(L==0)break;
-			for(int i=1; i<=V; i++){
-				if(i%P<L)M[i]=1;
-			}
-			for(int i=0; i<=V; i++){
-				sum+=M[i];
-			} 	
-			ans[num++]=sum;
+			int temp=(V/P)*L;
+			if(V%P>L)temp+=L;
+			else temp+=V%P; 
+			ans[num++]=temp;
 		}	
 		for(int i=0; i<num; i++){
 		
-			System.out.println("Case 1: "+ans[i]);
+			System.out.println("Case "+(i+1)+": "+ans[i]);
 		}
 		return ;
 	}
