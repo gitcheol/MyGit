@@ -142,13 +142,13 @@ Created on Wed Feb 13 00:35:34 2019
 #
 #
 # Reading from internet file
-import pandas as pd
-df = pd.read_csv('https://raw.githubusercontent.com/datascienceschool/docker_rpython/master/data/titanic.csv')
-#print(df)
-#df=data_frame.loc[data_frame['Survived'].isin('1'),:]
-df=df.sort_values('Pclass',ascending=False)
-
-print(df.head(3))
+#import pandas as pd
+#df = pd.read_csv('https://raw.githubusercontent.com/datascienceschool/docker_rpython/master/data/titanic.csv')
+##print(df)
+##df=data_frame.loc[data_frame['Survived'].isin('1'),:]
+#df=df.sort_values('Pclass',ascending=False)
+#
+#print(df.head(3))
 #print(df.tail(3))
 
 ###########################################
@@ -158,24 +158,26 @@ print(df.head(3))
 #import matplotlib.pyplot as plt 
 #import numpy as np
 ##data=[1,2,3,4,5,6,7] 
-##data=[4,5,6,1,2,3,7] 
-#data = np.arange(1,20,0.1)
+##data=[4,5,6,1,2,3,7]   #y축 data가 됨 
+##data = np.arange(1,20,0.1)
 #plt.plot(data) 
 #plt.ylabel('Values')
+#plt.xlabel('sungmins')
+#
 #plt.show()
 
 #import matplotlib.pyplot as plt 
 #import numpy as np
 #x = np.arange(0,10,0.1)
 #y = np.sin(x)
-#plt.figure(figsize=(6,6))
+#plt.figure(figsize=(10,4))
 #plt.plot(x,y) 
 #plt.grid()
 #plt.xlabel('x')
 #plt.ylabel('sin')
 #plt.show()
 
-# 
+ 
 #import numpy as np
 #import matplotlib.pyplot as plt 
 #import seaborn as sns 
@@ -185,20 +187,20 @@ print(df.head(3))
 #plt.plot(x_data, y_data) 
 #plt.ylabel('Values')
 #plt.show()
-#
+
 #• 특정 좌표를 이어주는 그래프 그리기
 #import matplotlib.pyplot as plt 
 #import seaborn as sns 
 #sns.set()
-#x_data = [0,1,2,3,4,5,6] 
+##x_data = [0,1,2,3,4,5,6] 
 #y_data = [1,3,4,7,10,15,16] 
-##colormap = x_data
-##plt.plot(x_data, y_data) 
-##plt.scatter(x_data, y_data, s=7, c=colormap, marker='>')
-#plt.bar(x_data, y_data, width=0.5, color='r')
+#colormap = x_data
+#plt.plot(x_data, y_data) 
+#plt.scatter(x_data, y_data, s=7, marker='>')
+##plt.bar(x_data, y_data, width=0.5, color='c')
 #plt.ylabel('Values')
 #plt.show()
-#
+
 #• 그래프 2개 그리기
 #import numpy as np
 #import matplotlib.pyplot as plt 
@@ -217,7 +219,7 @@ print(df.head(3))
 #plt.pie(y_data1)
 #plt.legend()
 #plt.show()
-#
+
 #• 좌표 찍기
 #import numpy as np
 #import matplotlib.pyplot as plt 
@@ -228,7 +230,7 @@ print(df.head(3))
 #print(x_values)
 #print(y_values)
 #plt.plot(x_values, y_values, 'o') 
-#plt.plot(x_values, y_values+0.5, 'r^') 
+#plt.plot(x_values, y_values+0.5, 'b^') 
 #plt.ylim([-1,1])
 #plt.show()
 
@@ -240,8 +242,8 @@ print(df.head(3))
 #x_values = np.linspace(0, 10, 50) 
 #y_values1 = np.sin(x_values) 
 #y_values2 = np.cos(x_values) 
-#plt.plot(x_values, y_values1, 'o', label='sin') 
-#plt.plot(x_values, y_values2, 'r^', label='cos') 
+#plt.plot(x_values, y_values1, label='sin') 
+#plt.plot(x_values, y_values2, 'r^', label='cos')  #plt에서 점 찍을 때 'r^'사용
 #plt.xlim([0,2*np.pi])
 #plt.legend()
 #plt.show()
@@ -252,9 +254,10 @@ print(df.head(3))
 #import seaborn as sns
 #sns.set()
 #x = np.linspace(0, 10, 10) 
-#plt.plot(x,x,'o',x,x**2,'^',x,x**3,'s')
-##plt.plot(x,x,'rs', x,x**2,'g^', x,x**3,'b--')
+##plt.plot(x,x,'o',x,x**2,'^',x,x**3,'s') #그래프 한번에 3개를 그린거
+#plt.plot(x,x,'rs', x,x**2,'g^', x,x**3,'--') #그래프 모양까지
 ##red squares, green triangles, blue dashes 
+##plt.xlim([0,2*np.pi])
 #plt.show()
 
 #• 2개의 리스트로 그래프 그리기
@@ -266,4 +269,4 @@ print(df.head(3))
 #values = np.random.randint(500,2000,10) 
 #plt.plot(years,values,'r^-') #red triangles solid line 
 #plt.show()
-##
+#
