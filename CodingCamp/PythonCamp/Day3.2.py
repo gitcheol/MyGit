@@ -113,34 +113,34 @@ Created on Wed Feb 13 00:35:34 2019
 #plt.savefig('scatter_plot.png', dpi=400, bbox_inches='tight')
 #plt.show()
 
-##5 Box plots represent data based on its minimum, first quartile, median, third quartile, and maximum values. The bottom and top of the box show the first and third quar‐ tile values, and the line through the middle of the box shows the median value. The lines, called whiskers, that extend from the ends of the box show the smallest and largest non-outlier values, and the points beyond the whiskers represent outliers.
-#
-#import numpy as np
-#import matplotlib.pyplot as plt
-#plt.style.use('ggplot')
-#
-#N = 500
-#normal = np.random.normal(loc=0.0, scale=1.0, size=N)
-#lognormal = np.random.lognormal(mean=0.0, sigma=1.0, size=N)
-#index_value = np.random.random_integers(low=0, high=N-1, size=N)
-#normal_sample = normal[index_value]
-#lognormal_sample = lognormal[index_value]
-#box_plot_data = [normal,normal_sample,lognormal,lognormal_sample]
-#
-#fig = plt.figure()
-#ax1 = fig.add_subplot(1,1,1)
-#
-#box_labels = ['normal','normal_sample','lognormal','lognormal_sample']
-#ax1.boxplot(box_plot_data, notch=False, sym='.', vert=True, whis=1.5, \
-#				showmeans=True, labels=box_labels)
-#ax1.xaxis.set_ticks_position('bottom')
-#ax1.yaxis.set_ticks_position('left')
-#ax1.set_title('Box Plots: Resampling of Two Distributions')
-#ax1.set_xlabel('Distribution')
-#ax1.set_ylabel('Value')
-#
-#plt.savefig('box_plot.png', dpi=400, bbox_inches='tight')
-#plt.show()
+#5 Box plots represent data based on its minimum, first quartile, median, third quartile, and maximum values. The bottom and top of the box show the first and third quar‐ tile values, and the line through the middle of the box shows the median value. The lines, called whiskers, that extend from the ends of the box show the smallest and largest non-outlier values, and the points beyond the whiskers represent outliers.
+
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+
+N = 500
+normal = np.random.normal(loc=0.0, scale=1.0, size=N)
+lognormal = np.random.lognormal(mean=0.0, sigma=1.0, size=N)
+index_value = np.random.random_integers(low=0, high=N-1, size=N)
+normal_sample = normal[index_value]
+lognormal_sample = lognormal[index_value]
+box_plot_data = [normal,normal_sample,lognormal,lognormal_sample]
+
+fig = plt.figure()
+ax1 = fig.add_subplot(1,1,1)
+
+box_labels = ['normal','normal_sample','lognormal','lognormal_sample']
+ax1.boxplot(box_plot_data, notch=False, sym='.', vert=True, whis=1.5, \
+				showmeans=True, labels=box_labels)
+ax1.xaxis.set_ticks_position('bottom')
+ax1.yaxis.set_ticks_position('left')
+ax1.set_title('Box Plots: Resampling of Two Distributions')
+ax1.set_xlabel('Distribution')
+ax1.set_ylabel('Value')
+
+plt.savefig('box_plot.png', dpi=400, bbox_inches='tight')
+plt.show()
 
 
 ##6 pandas simplifies the process of creating figures and plots based on data in Series and DataFrames by providing a plot function that operates on Series and DataFrames. By default, the plot function creates line plots, but you can use the kind argument to create different types of plots.

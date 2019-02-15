@@ -24,15 +24,15 @@ traffic = pinkwink_web['hit'].values
 
 fx = np.linspace(0, time[-1], 1000)
 
-## 1,2,3,15차 함수로 회귀
-#fp1 = np.polyfit(time, traffic, 1)
-#f1 = np.poly1d(fp1)
-#
-#f2p = np.polyfit(time, traffic, 2)
-#f2 = np.poly1d(f2p)
-#
-#f3p = np.polyfit(time, traffic, 3)
-#f3 = np.poly1d(f3p)
+# 1,2,3,15차 함수로 회귀
+fp1 = np.polyfit(time, traffic, 1)
+f1 = np.poly1d(fp1)
+
+f2p = np.polyfit(time, traffic, 2)
+f2 = np.poly1d(f2p)
+
+f3p = np.polyfit(time, traffic, 3)
+f3 = np.poly1d(f3p)
 
 f15p = np.polyfit(time, traffic, 15)
 f15 = np.poly1d(f15p)
