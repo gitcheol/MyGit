@@ -1,20 +1,21 @@
 import java.util.*;
 
 public class P1629{
+	static long A,B,C;
+	static long ans=1;
 	public static void main(String[] args){
 	Scanner sc=new Scanner(System.in);
-	long A,B,C;
 	A=sc.nextLong();
 	B=sc.nextLong();
 	C=sc.nextLong();
-	long ans=0;
-	for(int i=0; i<B; i++){
-		A*=A;
-		if(A>C){
-			ans=A%C;
-			break;
-		}
-	}	
-	System.out.println(ans);
+	System.out.println(re(A,B));
+
+	}
+	static long re(long n,long k){
+		if(k==0)return 1;
+		long temp=re(n,k/2);
+		long result=temp*temp%C;
+		if(k%2==1)result=result*n%C;
+		return result;
 	}
 }
