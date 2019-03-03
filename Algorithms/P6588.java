@@ -13,9 +13,9 @@ public class P9020{
 		int i=0;
 		while(i<T){
 			int temp=sc.nextInt();
-			for(int j=temp/2; j>0; j--){
+			for(int j=3; j>10001; j--){
 				if(PS[j]==1&&PS[temp-j]==1){
-					System.out.println(j+" "+(temp-j));
+					System.out.println(temp+" = "+j+" + "+(temp-j));
 					break;
 				}
 			}
