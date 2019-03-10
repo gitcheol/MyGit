@@ -1,21 +1,38 @@
 import java.util.*;
 
-public class Ex{
-	public static void main(String[] args){
-		int A,B;
-		long C=0;
-		Scanner sc=new Scanner(System.in);
-		A=sc.nextInt();
-		B=sc.nextInt();
-		for(int i=0; i<=200000000; i++){
-			C++;
-			for(int j=0; j<=2000000000; j++){
-				C++;	
-			}
+public class Ex {
+    static boolean edge[][];
+    static boolean visited[];
+    static int n;
+    static int m;
 
-		}	
-		System.out.println(A+B);
-		
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt();
+        m = scanner.nextInt();
+        edge = new boolean[n + 1][n + 1];
+        visited = new boolean[n + 1];
+        for (int i = 0; i < m; i++) {
+            int u = scanner.nextInt();
+            int v = scanner.nextInt();
+            edge[u][v] = true;
+        }
+        bfs(7);
+    }
 
-	}
+    public static void bfs(int cur) {
+        Queue<Integer> q = new LinkedList<>();
+        visited[cur] = true;
+        q.add(cur);
+        while (!q.isEmpty()) {
+            int here = q.remove();
+            System.out.print(String.valueOf(here) + ' ');
+            for (int there = 1; there <= n; there++) {
+                if (visited[there] || !((edge[here][there])||edge[there][here])) continue;
+                visited[there] = true;
+                q.add(there);
+            }
+        }
+    }
 }
+	
