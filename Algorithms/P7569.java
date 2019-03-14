@@ -14,13 +14,12 @@ public class P7569{
 		B=new int[H][M][N];	
 		int count=0;
 		int num=0;
-		int temp=0;
 		for(int i=0; i<H; i++){
 			for(int j=0; j<M; j++){
 				for(int k=0; k<N; k++){
 					B[i][j][k]=sc.nextInt();
 					if(B[i][j][k]==0)count++;
-					if(B[i][j][k]==1&&temp==0){
+					if(B[i][j][k]==1){
 						num++;q.add(i);q.add(j);q.add(k);
 					}	
 				}
