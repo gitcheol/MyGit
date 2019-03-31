@@ -6,14 +6,14 @@ public class ubbleSort{
 
         public static void main(String[] args){
                 Scanner sc=new Scanner(System.in);
-                bubble(S);
+                bubble();
                 for(int i=0; i<S.length;i++){
                         System.out.println(S[i]+" ");
                 }
         
         }
 
-        static void bubble(int[] x){
+        static void bubble(){
 		int temp;
                 for(int i=S.length-1; i>=0; i--){
 			for(int j=0; j<i; j++){
@@ -27,6 +27,6 @@ public class ubbleSort{
 		}
 
         
-        }
+        } 
 }
 
