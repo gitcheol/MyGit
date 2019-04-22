@@ -15,7 +15,7 @@ public class ubbleSort{
 
         static void bubble(){
 		int temp;
-                for(int i=S.length-1; i>=0; i--){
+        for(int i=S.length-1; i>=0; i--){
 			for(int j=0; j<i; j++){
 				if(S[j]>S[j+1]){
 					temp=S[j];
