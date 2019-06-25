@@ -12,33 +12,34 @@ public class P1781{
 		
 		int temp;
 		int min;
-		int flag;
+
+
 		for(int i=1; i<=N; i++){
 			index=sc.nextInt();
 			cup=sc.nextInt();
-			temp=index;
+
 			if(B[index]==0){
 				B[index]=cup;
 				continue;
 			}
+
 			min=B[index];
-			flag=0;
-			while(temp!=0){
-				if(B[temp]<min){
-					min=B[temp];
-					index=temp;
-					flag=1;
+			temp=index;
+			while(index!=0){
+				if(min>B[index]){
+					min=B[index];
+					temp=index;
 				}
-				temp--;
+				index--;
 			}
-			
-			if(flag==0)
-				B[index]=cup;
-			System.out.println("B["+i+"] : "+B[i]);
+			B[temp]=cup;
+			//System.out.println("B["+index+"] : "+B[index]);
+
+
 		}
 	
 		for(int i=0; i<N+1; i++){
-		
+			System.out.println("B["+i+"] : "+B[i]);
 		}
 	
 
