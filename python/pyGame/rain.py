@@ -1,4 +1,4 @@
-import pygame, sys,random
+import pygame, sys,random, time
 from pygame.locals import *
 
 class Raindrop:
@@ -21,7 +21,7 @@ class Hahee:
 		self.x=300
 		self.y=400
 	def draw(self):
-		screen.blit(hahee_image,(self.x,self.y))
+		screen.blit(mike_umbrella_image,(self.x,self.y))
 	def hit_by(self,raindrop):
 		return pygame.Rect(self.x,self.y,170,192).collidepoint((raindrop.x,raindrop.y))
 
@@ -38,6 +38,8 @@ class Cloud:
             self.x+=5
         if pressed_keys[K_LEFT]:
             self.x-=5
+    def hit_by(self,raindrop):
+        return pygame.Rect(self.x,self.y,170,192).collidepoint((raindrop.x,raindrop.y))
 			  
 pygame.init()
 pygame.display.set_caption("rain")
@@ -47,7 +49,9 @@ clock = pygame.time.Clock()
 #rain_x=random.randint(0,1000)
 raindrop_spawn_time=0
 raindrops=[]
-hahee_image=pygame.image.load("/Users/gichulkim/Downloads/ha.png").convert()
+hahee_image=pygame.image.load("/Users/gichulkim/Downloads/Mike.png").convert()
+mike_umbrella_image=pygame.image.load("/Users/gichulkim/Downloads/Mike_umbrella.png").convert()
+
 cloud_image=pygame.image.load("/Users/gichulkim/Downloads/cloud.png").convert()
 hahee=Hahee()
 cloud=Cloud()
