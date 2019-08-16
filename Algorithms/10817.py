@@ -1,0 +1,9 @@
+list=map(int,input().split())
+print(list)
+'''
+list.append(A)
+list.append(B)
+list.append(C)
+list.sort()
+print(list[1])
+'''
