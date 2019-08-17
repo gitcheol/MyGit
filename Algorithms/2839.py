@@ -13,4 +13,3 @@ while True:
 	ans-=1
 
 print(ans+int(temp/3))
-	
