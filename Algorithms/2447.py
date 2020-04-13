@@ -1,6 +1,5 @@
 N=int(input())
 
-
 def star(i,j):
     while i!=0:
         if (i%3 == 1 and j%3 == 1) : 
