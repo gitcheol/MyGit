@@ -1,7 +1,9 @@
+import sys
+
 N=int(input())
 L=[]
 for i in range(N):
-    L.append(int(input()))
+    L.append(int(sys.stdin.readline()))
 
 count=1
 tmp=L[N-1]
