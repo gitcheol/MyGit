@@ -32,8 +32,10 @@ tf.model.compile(loss='mse',optimizer=sgd)
 tf.model.summary()
 
 #ift() executes training
-tf.model.fit(x_train, y_train, epochs=100)
+history=tf.model.fit(x_train, y_train, epochs=100)
+
 
 #predict() returns predicted value
 y_predict=tf.model.predict(np.array([[73.,80.,75.]]))
 print(y_predict)
+
