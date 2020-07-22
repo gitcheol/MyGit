@@ -35,7 +35,7 @@ learning_rate=0.1
 tf.model = tf.keras.Sequential()
 
 #units==output shape, input_dim == input shape
-tf.model.add(tf.keras.layers.Dense(units=3, input_dim=3, activation='sigmoid'))
+tf.model.add(tf.keras.layers.Dense(units=3, input_dim=3, activation='softmax'))
 
 #sgd=tf.keras.optimizers.SGD(lr=1e-5)
 tf.model.compile(loss='categorical_crossentropy',optimizer=tf.keras.optimizers.SGD(lr=learning_rate),metrics=['accuracy'])
