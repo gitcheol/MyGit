@@ -1,22 +1,31 @@
-#include <bits/stdc++.h>
-using namespace std;
+def rsp(x,y):
+    if (x == 'R' and y == 'S') or (x == 'S' and y == 'P') or (x == 'P' and y == 'R'):
+        return 'ms'
+    elif (x == 'S' and y == 'R') or (x == 'P' and y == 'S') or (x == 'R' and y == 'P'):
+        return 'tk'
+    else:
+        return 'none'
 
-int Z(int sz, int x, int y){
-    if (sz == 1) return 0;
-    sz /= 2;
-    for(int i = 0 ; i < 2;  i++){
-        for(int j = 0 ; j < 2 ; j++){
-            if (x < sz * (i+1) and y < sz * (j+1)){
-                return (i*2+j) * sz*sz + Z(sz, x-sz*i, y-sz*j);
-            }
-        }
-    }
-    return 0; // 에러 방지
-}
+ml, mr, tl, tr = input().split()
 
-int main(){
-    ios::sync_with_stdio(false); cin.tie(NULL);
-    int N, r, c; cin >> N >> r >> c;
-    // shift 연산으로 2^N을 1 << N처럼 사용 가능 (자료형 범위 내에서)
-    cout << Z(1<<N, r, c);
-}
+result = set()
+result.add(rsp(ml,tl))
+result.add(rsp(ml,tr))
+result.add(rsp(mr,tl))
+result.add(rsp(mr,tr))
+
+if (tl == tr) and (rsp(ml,tl)=='ms' or rsp(mr,tl)=='ms'):
+    print('MS')
+    exit()
+if (ml == mr) and (rsp(ml,tl)=='tk' or rsp(ml,tr)=='tk'):
+    print('TK')
+    exit()
+
+if 'ms' in result and 'tk' in result:
+    print('?')
+elif 'ms' in result:
+    print('MS')
+elif 'tk' in result:
+    print('TK')
+else:
+    print('?')
