@@ -1,29 +1,13 @@
-S=input()
-ans =0 
-	
-ans+=S.count('c=')
-S=S.replace('c=','')
+s=input()
+ans=0
+count=0
+croatia=['c=','c-','dz=','d-','lj','nj','s=','z=']
+for i in range(len(s)):
+    if i+1!=len(s):
+        if s[i]+s[i+1] in croatia:
+            count+=1
 
-ans+=S.count('c-')
-S=S.replace('c-','')
-
-ans+=S.count('dz=')
-S=S.replace('dz=','')
-
-ans+=S.count('d-')
-S=S.replace('d-','')
-
-temp=0
-temp+=S.count('lj')
-temp+=S.count('nj')
-
-#S=S.replace('lj','')
-#S=S.replace('nj','')
-
-ans+=S.count('s=')
-S=S.replace('s=','')
-
-ans+=S.count('z=')
-S=S.replace('z=','')
-
-print(ans+len(S)-temp)
+    if i+2<len(s):
+        if s[i]+s[i+1]+s[i+2] == croatia:
+            count+=1
+print(len(s)-count)
