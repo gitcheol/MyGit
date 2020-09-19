@@ -1,21 +1,44 @@
 N,K=map(int,input().split())
+K-=1
 
-s=[0]
+s=[]
 for i in range(1,N+1):
     s.append(i)
-
 ans=[]
 
-tmp=1
-while len(s)!=1:
-    if tmp==K:
-        ans.append(s[tmp])
-        s[tmp+1]
-        del s[tmp]
-    tmp+=1
-    if tmp==len(s):
-        tmp=1    
+length=len(s)
+
+tmp=0
+count=0
+
+if K==0:
+    s='<'
+    for i in range(1,N+1):
+        s=s+str(i)
+        if i==N:
+            break
+        s+=','
+    s+='>'
     print(s)
+    exit()
 
-
-print(ans)
+ss='<'
+while length:
+    if tmp>=length:
+        tmp=0
+    if count==K:
+        val=s.pop(tmp)
+        length-=1
+        if tmp>=length:
+            tmp=0
+        #ans.append(val)
+        ss+=(str(val)+', ')
+        count=0
+    count+=1    
+    tmp+=1 
+    
+ss=ss[0:-2]+'>'
+print(ss)    
+#print('<',end='')
+#print(', '.join(list(map(str,ans))),end='')
+#print('>')
