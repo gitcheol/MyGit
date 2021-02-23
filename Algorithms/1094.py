@@ -12,4 +12,6 @@ while True:
         stick.append(cut)
     else : 
         stick.append(cut)
-        stick.append(cut)
+
+
+print(stick.append(cut)

@@ -9,3 +9,5 @@ elif A>=70:
 elif A>=60:
 	print('D')
 else : print('F')
+
+
